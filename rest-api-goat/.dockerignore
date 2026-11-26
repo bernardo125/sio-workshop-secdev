@@ -1,0 +1,8 @@
+# Ignore files and folders
+assets/
+reports/
+Dockerfile
+private_config/
+
+# Uncomment to add files with ! symbol  
+#!assets/Postman.json

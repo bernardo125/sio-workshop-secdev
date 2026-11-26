@@ -1,22 +1,37 @@
-## (in)secure git workshop 🔓+🔑 = 🔐
-The present repository has several branches, each with a distinct challenge.    
-You can observe the several steps in the workshop diagram [[+]](workshop_steps.png).
+## step5 - dynamic analysis
 
-### Starting points 🚗 
-1. The present repo is for demonstration purposes     
-2. There are bad practices everywhere ⚡☠️
-3. We'll fix them throughout the workshop!
+### 1. What is dynamic analysis ?
 
-### Execution options 💻
-- Linux or macOS terminal (you can use the subject's virtual machine, it already has all the necessary tools installed)
-- Or Fork repo and use GitHub Actions
-    - When forking, don't forget to uncheck the option `Copy the main branch only`. You need to fork all existing branches.
-    - You will need to activate the issues (Settings -> General -> Issues)
+Dynamic application security testing (DAST): "Technologies designed to detect conditions indicative of a security vulnerability in an application in its running state."
+  (Gartner, 2022)
 
-### Workshop steps preview
-You can observe all the execution steps on GitHub [actions](https://github.com/detiuaveiro/secure-git-workshop/actions/runs/2366114917) or in the workflow definition file called [ci-demo.yml](https://github.com/detiuaveiro/secure-git-workshop/blob/ci-demo/.github/workflows/ci-demo.yml).
+### 2. Run OWASP ZAP 
+```
+- We will use OWASP ZAP container
+- And a GitHub Workflow
+- To analyse a REST API
+- DAST API scanning
+```
 
-### Let's start
+### 3. Preview the REST API application code
+```
+- https://github.com/optiv/rest-api-goat
+```
+
+### 4. Analyze the Workflow definition
 ```bash
-git checkout start
+cat .github/workflows/api-scanning.yml
+```
+
+Put the `api-scanning.yaml` file in the `main` branch, under `.github/workflows`.
+
+### 5. View the Workflow actions running   
+If you forked the repository, change the following URL accordingly.
+```
+https://github.com/detiuaveiro/secure-git-workshop/actions/workflows/api-scanning.yml
+```
+
+### Your done 👍 move to step 6
+```bash
+git checkout step6
 ```
